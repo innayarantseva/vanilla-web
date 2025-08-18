@@ -1,0 +1,13 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="16" 
+    height="16" 
+    fill="none" 
+    viewBox="0 0 16 16" 
+    aria-hidden="true" 
+    role="img" 
+    fill-rule="evenodd"
+    style="width: 16px; height: 16px; color: rgb(37, 94, 238);"
+>
+    <path stroke="currentColor" stroke-width="2" d="M12.5 4.5 7 11 3.5 7.5"></path>
+</svg>

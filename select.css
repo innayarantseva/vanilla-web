@@ -1,10 +1,87 @@
+/* Opting in to the custom select rendering for both select and picker */
 select,
 ::picker(select) {
   appearance: base-select;
+  font-size: 14px;
+  color: #1c1e21;
 }
 
-option::before {
-    content: '🩷';
-    font-size: 80%;
-    margin: 0.5rem;
-  }
+select {
+  border: 1px solid rgb(205, 208, 224);
+  border-radius: 6px;
+  box-shadow: rgba(110, 116, 146, 0.12) 0px 1px 1px 0px;
+  padding: 2px 4px;
+  min-height: 32px;
+
+  display: flex;
+  align-items: center;
+  width: 300px;
+
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: rgb(156, 162, 189);
+  background: none;
+}
+
+select:focus {
+  border-color: rgb(37, 94, 238);
+  box-shadow: rgb(37, 94, 238) 0px 0px 0px 1px, rgba(42, 47, 69, 0.12) 0px 2px 1px 0px;
+  outline: none;
+}
+
+selectedcontent {
+  padding-left: 8px;
+}
+
+select::picker-icon {
+  content: url('chevron-down.svg');
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+::picker(select) {
+  padding: 4px 0;
+  top: calc(anchor(bottom) + 4px);
+
+  box-shadow: rgba(110, 116, 146, 0.2) 0px 2px 8px 0px;
+  border: 1px solid rgb(205, 208, 224);
+  border-radius: 6px;
+}
+
+option {
+  padding: 4px 16px 4px 12px;
+  gap: 12px;
+}
+
+
+option:hover,
+option:checked:hover {
+  background: rgb(236, 238, 244);
+}
+
+option:focus,
+option:checked:focus {
+  outline: none;
+  background: rgb(236, 238, 244);
+}
+
+option:checked {
+  background: none;
+}
+
+option::checkmark {
+  content: url('checkmark.svg');
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: .2px;
+  color: #434862;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}

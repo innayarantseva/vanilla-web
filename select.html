@@ -13,14 +13,38 @@
     </nav>
 
     <h1>Select</h1>
-    <a href="https://developer.chrome.com/blog/rfc-customizable-select">RFC for Customizable Select</a>
+    
+    <section>
+        <h3>Adjust-styled select</h3>
+        <p>Note: This demo only works in Chrome starting from version 135</p>
 
-    <p>Note: This demo only works in Chrome Canary, as the feature is still on Stage 2 in the WHATWG spec. Install Chrome Canary from <a href="https://www.google.com/chrome/canary/">here</a>.</p>
+        <label for="select">Fruits</label>
+        <select id="select">
+            <button>
+                <selectedcontent></selectedcontent>
+            </button>
 
-    <select>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-    </select>
+            <option value="">Please select a fruit</option>
+
+            <option value="apple">🍎 Apple</option>
+            <option value="banana">🍌 Banana</option>
+            <option value="grapes">🍇 Grapes</option>
+            <option value="strawberry">🍓 Strawberry</option>
+            <option value="cherry">🍒 Cherry</option>
+            <option value="peach">🍑 Peach</option>
+            <option value="pineapple">🍍 Pineapple</option>
+            <option value="mango">🥭 Mango</option>
+            <option value="tomato">🍅 Tomato</option>
+        </select>
+    </section>
+
+    <section>
+        <h3>Resources:</h3>
+
+        <ul>
+            <li><a href="https://developer.chrome.com/blog/rfc-customizable-select" target="_blank">RFC for Customizable Select</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select" target="_blank">MDN</a></li>
+        </ul>
+    </section>
 </body>
 </html>
