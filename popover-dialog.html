@@ -11,37 +11,38 @@
         <a href="index.html">🏡</a>
     </nav>
 
-    <h1>Popover Dialog</h1>
-
-    <section>
-        <h2>Popover + Dialog</h2>
-        <p>You can use a combination of popover and dialog to get the open/close behavior for a dialog "for free".</p>
-
-        <button popovertarget="dialog">Open</button>
-
-        <dialog id="dialog" popover="auto">
-            <h2>Hello</h2>
-            <p>This is a popover dialog</p>
-
-            <button popovertarget="dialog">Close</button>
-        </dialog>
-    </section>
-
-    <section>
-        <h2>Dialog with a trap focus</h2>
-        <p>Use <code>.showModal()</code> to open the dialog when you need the focus to be trapped inside the dialog.</p>
-
-        <button onclick="document.getElementById('dialog-trap').showModal()">Open</button>
-
-        <dialog id="dialog-trap">
-            <h2>Hello</h2>
-
-            <input type="text" placeholder="Enter your name">
-            <input type="email" placeholder="Enter your email">
-            <input type="password" placeholder="Enter your password">
-            <input type="submit" value="Submit">
-        </dialog>
-    </section>
+    <main>
+        <h1 style="view-transition-name: popover-dialog-title;">Popover Dialog</h1>
     
+        <section>
+            <h2>Popover + Dialog</h2>
+            <p>You can use a combination of popover and dialog to get the open/close behavior for a dialog "for free".</p>
+    
+            <button popovertarget="dialog">Open</button>
+    
+            <dialog id="dialog" popover="auto">
+                <h2>Hello</h2>
+                <p>This is a popover dialog</p>
+    
+                <button popovertarget="dialog">Close</button>
+            </dialog>
+        </section>
+    
+        <section>
+            <h2>Dialog with a trap focus</h2>
+            <p>Use <code>.showModal()</code> to open the dialog when you need the focus to be trapped inside the dialog.</p>
+    
+            <button onclick="document.getElementById('dialog-trap').showModal()">Open</button>
+    
+            <dialog id="dialog-trap">
+                <h2>Hello</h2>
+    
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <input type="password" placeholder="Enter your password">
+                <input type="submit" value="Submit">
+            </dialog>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="common.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>View Transitions</title>
+    </head>
+    <body class="prefetch prerender">
+        <nav>
+            <a href="index.html">🏡</a>
+        </nav>
+
+        <main>
+            <h1 style="view-transition-name: view-transitions-title;">View Transitions</h1>
+
+            <p>Two components to make your MPA feel like a SPA:</p>
+            <ol>
+                <li>View transitions: allow you to animate the transition between pages</li>
+                <li>Speculation rules: pre-fetch or pre-render pages for almost instant navigation</li>
+            </ol>
+    
+            <h2>Resources:</h2>
+            <ul>
+                <li><a href="https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/" target="_blank">It's time for modern CSS to kill the SPA</a></li>
+                <li><a href="https://www.debugbear.com/blog/view-transitions-spa-without-framework" target="_blank">View Transitions: SPA without framework</a></li>
+                <li><a href="https://developer.chrome.com/docs/web-platform/view-transitions/cross-document" target="_blank">Chrome for Devs: Cross-document view transitions</a></li>
+                <li><a href="https://developer.chrome.com/docs/web-platform/implementing-speculation-rules/" target="_blank">Chrome for Devs: Implementing speculation rules</a></li>
+            </ul>
+        </main>
+        
+        <script>
+            if (document.prerendering) {
+                console.log("Page is prerendering");
+            } else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
+                console.log("Page has already prerendered");
+            } else {
+                console.log("This page load was not using prerendering");
+            }
+        </script>
+    </body>
+</html>

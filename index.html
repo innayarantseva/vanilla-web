@@ -7,29 +7,35 @@
     <title>Vanilla Web</title>
 </head>
 <body>
-    <h1>Vanilla Web</h1>
-    <p>Let's make the browser work, not us.</p>
+    <main> 
+        <h1 class="title">Vanilla Web</h1>
+        <p>Let's make the browser work, not us.</p>
+        
+        <p>Index:</p>
+        <nav>
+            <ul>
+                <li><a href="view-transitions.html" style="view-transition-name: view-transitions-title;">👀 View Transitions</a></li>
+                <li><a href="details.html" style="view-transition-name: details-title;">🪗 Details</a></li>
+                <li><a href="select.html" style="view-transition-name: select-title;">🎨 Customizable Select</a></li>
+                <li><a href="popover-dialog.html" style="view-transition-name: popover-dialog-title;">🍾 Popover Dialog</a></li>
+                <li><a style="view-transition-name: import-maps-title;">🚧 Import maps</a></li>
+                <li><a style="view-transition-name: spy-on-scroll-title;">🚧 Spy on scroll</a></li>
+                <li><a style="view-transition-name: hide-element-until-found-title;">🚧 Hide element until found</a></li>
+                <li><a href="html-energy.html" style="view-transition-name: html-energy-title;">HTML Energy</a></li>
+            </ul>
+        </nav>
+    </main>
 
-    <img src="https://d2w9rnfcy7mm78.cloudfront.net/37052100/original_3f5bdb95885c055f957c633d6418d37d.jpg?1748533330?bc=0" alt="html energy" width="500">
-    
-    <p>Contents:</p>
-    <nav>
-        <ul>
-            <li><a href="details.html">🪗 Details</a></li>
-            <li><a href="select.html">🎨 Customizable Select</a></li>
-            <li><a href="popover-dialog.html">🍾 Popover Dialog</a></li>
-            <li><a>🚧 Import maps</a></li>
-            <li><a>🚧 Spy on scroll</a></li>
-            <li><a>🚧 Hide element until found</a></li>
-        </ul>
-    </nav>
-    
-    <section>
-        <h2>Resources</h2>
 
-        <ul>
-            <li><a href="https://html.energy/index.html">HTML Energy</a></li>
-            <li><a href="https://www.jonoalderson.com/conjecture/its-time-for-modern-css-to-kill-the-spa/">It's time for modern CSS to kill the SPA</a></li>
-    </section>
+    <script type="speculationrules">
+        {
+          "prerender": [{
+            "where": { "selector_matches": ".prerender" }
+          }],
+          "prefetch": [{
+            "where": { "selector_matches": ".prefetch" }
+          }]
+        }
+    </script>
 </body>
 </html>

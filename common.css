@@ -1,7 +1,22 @@
+/* Opt-in to view transitions */
 @view-transition {
     navigation: auto;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+main {
+  width: max-content;
+  margin: auto;
 }
