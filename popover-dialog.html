@@ -5,36 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Popover Dialog</title>
+
+    <style>
+        #tooltip {
+            top: calc(anchor(bottom) + 5px);
+            justify-self: anchor-center;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">🏡</a>
-    </nav>
-
     <main>
         <h1 style="view-transition-name: popover-dialog-title;">Popover Dialog</h1>
+
+        <p onclick="alert('🚨 🚨 🚨 ALARM 🚨 🚨 🚨')">(Call the alarm!)</p>
+
+        <p>There are two types of overlay content:</p>
+        <ul>
+            <li>Non-modal: when the rest of the page is still interactive (Popover API)</li>
+            <li>Modal: when a blocking action should be performed</li>
+        </ul>
     
         <section>
-            <h2>Popover + Dialog</h2>
-            <p>You can use a combination of popover and dialog to get the open/close behavior for a dialog "for free".</p>
+            <h2>Popover API: "Tooltip"</h2>
+             <p>
+                The tooltip is positioned using the CSS anchor positioning. 
+                Assotiating the popover with a control allows us to use <code>anchor()</code> without manually referencing the control and the target.
+                Read more on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#associating_anchor_and_positioned_elements" target="_blank">MDN</a>.
+            </p>
+
+            <button popovertarget="tooltip" id="tooltip-button">Toggle the popover</button>
+            <div id="tooltip" popover>🎉 Popover content 🍾</div>
+        </section>
+
+        <section>
+            <h2>Non-modal Dialog: Popover + Dialog</h2>
+            <p>
+                Normally, to open a dialog, you would need to trigger it with JS. 
+                But popover can be controlled via HTML only. 
+                You can use a combination of popover and dialog to get the open/close behavior for a dialog "for free".
+            </p>
     
-            <button popovertarget="dialog">Open</button>
+            <button popovertarget="popover-dialog">Open</button>
     
-            <dialog id="dialog" popover="auto">
-                <h2>Hello</h2>
+            <dialog id="popover-dialog" popover="auto">
+                <h2>Non-modal Dialog</h2>
                 <p>This is a popover dialog</p>
     
-                <button popovertarget="dialog">Close</button>
+                <button popovertarget="popover-dialog">Close</button>
             </dialog>
         </section>
     
         <section>
-            <h2>Dialog with a trap focus</h2>
+            <h2>Modal: Dialog with a trap focus</h2>
             <p>Use <code>.showModal()</code> to open the dialog when you need the focus to be trapped inside the dialog.</p>
     
-            <button onclick="document.getElementById('dialog-trap').showModal()">Open</button>
+            <button onclick="document.getElementById('modal-dialog').showModal()">Open</button>
     
-            <dialog id="dialog-trap">
+            <dialog id="modal-dialog">
                 <h2>Hello</h2>
     
                 <input type="text" placeholder="Enter your name">
@@ -44,5 +72,10 @@
             </dialog>
         </section>
     </main>
+
+    <nav>
+        <a href="index.html"><- Home</a>
+        <a href="html-energy.html">Next: HTML Energy -></a>
+    </nav>
 </body>
 </html>

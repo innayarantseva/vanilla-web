@@ -1,6 +1,6 @@
 /* Opt-in to view transitions */
 @view-transition {
-    navigation: auto;
+  navigation: auto;
 }
 
 html {
@@ -18,5 +18,13 @@ body {
 
 main {
   width: max-content;
+  max-width: 600px;
   margin: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  gap: 24px;
 }

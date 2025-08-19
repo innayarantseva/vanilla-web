@@ -4,21 +4,37 @@
         <link rel="stylesheet" href="common.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>View Transitions</title>
-    </head>
-    <body class="prefetch prerender">
-        <nav>
-            <a href="index.html">🏡</a>
-        </nav>
+        <title>MPA instead of SPA</title>
 
+        <style>
+            .link-card {
+                display: block;
+                width: fit-content;
+                padding: 12px;
+                margin-bottom: 16px;
+
+                border: 1px solid;
+                border-radius: 12px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
         <main>
-            <h1 style="view-transition-name: view-transitions-title;">View Transitions</h1>
+            <h1 style="view-transition-name: mpa-title;">MPA instead of SPA</h1>
 
             <p>Two components to make your MPA feel like a SPA:</p>
             <ol>
                 <li>View transitions: allow you to animate the transition between pages</li>
                 <li>Speculation rules: pre-fetch or pre-render pages for almost instant navigation</li>
             </ol>
+
+            <a href="transition.html" class="link-card">
+                <p style="view-transition-name: transition-title;">View Transitions Demo</p>
+                <img src="images/sleepy_dog.jpeg" alt="Sleepy Dog" width="200" style="view-transition-name: transition-image;">
+            </a>
+
+            <a href="https://speculation-rules-examples.vercel.app/demo-with-spec-rules/" target="_blank">Speculation Rules Demo</a>
     
             <h2>Resources:</h2>
             <ul>
@@ -28,15 +44,10 @@
                 <li><a href="https://developer.chrome.com/docs/web-platform/implementing-speculation-rules/" target="_blank">Chrome for Devs: Implementing speculation rules</a></li>
             </ul>
         </main>
-        
-        <script>
-            if (document.prerendering) {
-                console.log("Page is prerendering");
-            } else if (performance.getEntriesByType("navigation")[0]?.activationStart > 0) {
-                console.log("Page has already prerendered");
-            } else {
-                console.log("This page load was not using prerendering");
-            }
-        </script>
+
+        <nav>
+            <a href="index.html"><- Home</a>
+            <a href="details.html">Next: Details -></a>
+        </nav>
     </body>
 </html>

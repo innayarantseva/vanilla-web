@@ -4,38 +4,27 @@
     <link rel="stylesheet" href="common.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vanilla Web</title>
+    <title>Back to Basics</title>
+
+    <style>
+        h1, h4, p {
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
     <main> 
-        <h1 class="title">Vanilla Web</h1>
+        <h1 class="title">Back to Basics</h1>
         <p>Let's make the browser work, not us.</p>
         
-        <p>Index:</p>
-        <nav>
-            <ul>
-                <li><a href="view-transitions.html" style="view-transition-name: view-transitions-title;">👀 View Transitions</a></li>
+        <h4>Index:</h4>
+            <ol>
+                <li><a href="mpa.html" style="view-transition-name: mpa-title;">👀 MPA instead of SPA</a></li>
                 <li><a href="details.html" style="view-transition-name: details-title;">🪗 Details</a></li>
-                <li><a href="select.html" style="view-transition-name: select-title;">🎨 Customizable Select</a></li>
+                <li><a href="inputs.html" style="view-transition-name: inputs-title;">🎨 Inputs</a></li>
                 <li><a href="popover-dialog.html" style="view-transition-name: popover-dialog-title;">🍾 Popover Dialog</a></li>
-                <li><a style="view-transition-name: import-maps-title;">🚧 Import maps</a></li>
-                <li><a style="view-transition-name: spy-on-scroll-title;">🚧 Spy on scroll</a></li>
-                <li><a style="view-transition-name: hide-element-until-found-title;">🚧 Hide element until found</a></li>
-                <li><a href="html-energy.html" style="view-transition-name: html-energy-title;">HTML Energy</a></li>
-            </ul>
-        </nav>
+                <li><a href="html-energy.html" style="view-transition-name: html-energy-title;">⚡️ HTML Energy</a></li>
+            </ol>
     </main>
-
-
-    <script type="speculationrules">
-        {
-          "prerender": [{
-            "where": { "selector_matches": ".prerender" }
-          }],
-          "prefetch": [{
-            "where": { "selector_matches": ".prefetch" }
-          }]
-        }
-    </script>
 </body>
 </html>

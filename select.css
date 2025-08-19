@@ -36,7 +36,7 @@ selectedcontent {
 }
 
 select::picker-icon {
-  content: url('chevron-down.svg');
+  content: url('images/chevron-down.svg');
   width: 16px;
   height: 16px;
   margin-right: 8px;
@@ -73,7 +73,7 @@ option:checked {
 }
 
 option::checkmark {
-  content: url('checkmark.svg');
+  content: url('images/checkmark.svg');
 }
 
 label {

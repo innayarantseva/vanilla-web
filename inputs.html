@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="select.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <main>
+        <h1 style="view-transition-name: inputs-title;">Inputs</h1>
+        
+        <section>
+            <h3>Customizable Select</h3>
+            <p>Note: This demo only works in Chrome starting from version 135</p>
+    
+            <label for="select">Fruits</label>
+            <select id="select">
+                <button>
+                    <selectedcontent></selectedcontent>
+                </button>
+    
+                <option value="">Please select a fruit</option>
+    
+                <option value="apple">🍎 Apple</option>
+                <option value="banana">🍌 Banana</option>
+                <option value="grapes">🍇 Grapes</option>
+                <option value="strawberry">🍓 Strawberry</option>
+                <option value="cherry">🍒 Cherry</option>
+                <option value="peach">🍑 Peach</option>
+                <option value="pineapple">🍍 Pineapple</option>
+                <option value="mango">🥭 Mango</option>
+                <option value="tomato">🍅 Tomato</option>
+            </select>
+
+            <details style="margin-top: 16px;">
+                <summary>Resources</summary>
+                <ul>
+                    <li><a href="https://developer.chrome.com/blog/rfc-customizable-select" target="_blank">RFC for Customizable Select</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select" target="_blank">MDN</a></li>
+                </ul>
+            </details>
+        </section>
+
+        <section>
+            <h3>Color picker</h3>
+            
+            <label for="color-picker">Color</label>
+            <input type="color" id="color-picker">
+
+            <p class="color-picker-text">The current color is <span id="color-picker-value"></span></p>
+        </section>
+
+        <section>
+            <h3>Color picker with <code>datalist</code></h3>
+
+            <label for="color-picker-with-list">Pick a color:</label>
+            <input type="color" list="color-palette" id="color-picker-with-list">
+            <datalist id="color-palette">
+                <option value="#00ff00"></option>
+                <option value="#0000ff"></option>
+                <option value="#ff0000"></option>
+            </datalist>
+        </section>
+    </main>
+
+    <nav>
+        <a href="index.html"><- Home</a>
+        <a href="popover-dialog.html">Next: Popover Dialog -></a>
+    </nav>
+
+    <script>
+        const colorPicker = document.getElementById('color-picker');
+        const colorPickerValue = document.getElementById('color-picker-value');
+        const colorPickerText = document.querySelector('.color-picker-text');
+
+        const defaulValue = "#255eee";
+
+        colorPicker.value = defaulValue;
+        colorPickerValue.textContent = defaulValue;
+        colorPickerText.style.color = defaulValue;
+
+        colorPicker.addEventListener('input', () => {
+            colorPickerValue.textContent = colorPicker.value;
+            colorPickerText.style.color = colorPicker.value;
+        });
+    </script>
+</body>
+</html>
