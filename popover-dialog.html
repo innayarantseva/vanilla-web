@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="common.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popover Dialog</title>
+    <title>Overlay Content</title>
 
     <style>
         #tooltip {
@@ -16,14 +16,14 @@
 </head>
 <body>
     <main>
-        <h1 style="view-transition-name: popover-dialog-title;">Popover Dialog</h1>
+        <h1 style="view-transition-name: popover-dialog-title;">Overlay Content</h1>
 
-        <p onclick="alert('🚨 🚨 🚨 ALARM 🚨 🚨 🚨')">(Call the alarm!)</p>
+        <p onclick="alert('🚨 🚨 🚨 ALARM 🚨 🚨 🚨')" style="cursor: pointer;">(Don't call the alarm!)</p>
 
-        <p>There are two types of overlay content:</p>
+        <p><b>There are two types of overlay content:</b></p>
         <ul>
-            <li>Non-modal: when the rest of the page is still interactive (Popover API)</li>
-            <li>Modal: when a blocking action should be performed</li>
+            <li><u>Non-modal:</u> when the rest of the page is still interactive <a href="https://developer.mozilla.org/en-US/docs/Web/API/Popover_API" target="_blank">(Popover API)</a></li>
+            <li><u>Modal:</u> when a blocking action should be performed <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/dialog" target="_blank">(Dialog with <code>.showModal()</code>)</a></li>
         </ul>
     
         <section>
@@ -63,7 +63,7 @@
             <button onclick="document.getElementById('modal-dialog').showModal()">Open</button>
     
             <dialog id="modal-dialog">
-                <h2>Hello</h2>
+                <h2>You need to submit this form to proceed:</h2>
     
                 <input type="text" placeholder="Enter your name">
                 <input type="email" placeholder="Enter your email">
